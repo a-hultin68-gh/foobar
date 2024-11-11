@@ -30,6 +30,8 @@ jobs:
 
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
 
 # echo "hello world" to file hello.txt
       - name: Make Hello file

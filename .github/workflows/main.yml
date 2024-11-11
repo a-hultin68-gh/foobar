@@ -16,3 +16,14 @@ jobs:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
         run: |
           gh api octocat
+          
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+# echo "hello world" to file hello.txt
+      - name: Make Hello file
+        run: |
+          echo "Hello World" > hello.txt
+      - name: Add file
+        run: | 
+          git add hello.txt

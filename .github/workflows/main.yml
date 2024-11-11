@@ -27,3 +27,7 @@ jobs:
       - name: Add file
         run: | 
           git add hello.txt
+      - name: Commit
+        run: |
+          git commit -m "Hello commit"
+          
